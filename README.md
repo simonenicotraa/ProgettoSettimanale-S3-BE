@@ -1,31 +1,30 @@
 # ProgettoSettimanale-S3-BE
-Creare le classi necessarie a gestire un catalogo bibliotecario. Il catalogo è formato da elementi che possono essere Libri o Riviste. Sia Libri che riviste hanno i seguenti attributi:
-Catalog:
+Creare le classi necessarie a gestire un catalogo bibliotecario. Il catalogo è formato da elementi che possono essere Libri o Riviste. Di seguito attributi delle classi. <br>
+class Abstract Catalog :
 - Codice ISBN (codice univoco)
 - Titolo
 - Anno pubblicazione
 - Numero pagine
 
-I libri hanno inoltre:
-Book:
+
+class Book extends Catalog:
 - Autore
 - Genere
 
-Le riviste hanno:
-Magazine:
+class Magazine Catalog:
 - Periodicità [SETTIMANALE, MENSILE, SEMESTRALE]
 
 Creare inoltre le classi necessarie alla gestione del prestito:
 
-L'utente è caratterizzato dai seguenti attributi:
-User:
+L'utente è caratterizzato dai seguenti attributi:<br>
+class User:
 - Nome
 - Cognome
 - Data di nascita
 - Numero di tessera
 
-Il prestito è caratterizzato da:
-Lending:
+Il prestito è caratterizzato da:<br>
+class Lending:
 - Utente 
 - Elemento prestato (può essere un libro o una rivista)
 - Data inizio prestito
@@ -33,7 +32,7 @@ Lending:
 - Data restituzione effettiva
 
 
-L'archivio deve permettere le seguenti operazioni:
+L'archivio deve permettere le seguenti operazioni:<br>
 ArchiveService:
 - Aggiunta di un elemento del catalogo
 - Rimozione di un elemento del catalogo dato un codice ISBN
